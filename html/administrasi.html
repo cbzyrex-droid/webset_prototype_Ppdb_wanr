@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrasi PPDB</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">PPDB YAYASAN</a>
+
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="profil.html">Profil</a>
+        <a href="daftar.html">Pendaftaran</a>
+        <a href="administrasi.html">Administrasi</a>
+        <a href="pengumuman.html">Pengumuman</a>
+        <a href="kontak.html">Kontak</a>
+    </nav>
+</header>
+
+<main class="administrasi-container">
+
+    <section class="administrasi-heading">
+        <span>INFORMASI PPDB</span>
+        <h1>Administrasi Pendaftaran</h1>
+        <p>
+            Silakan pilih jenjang pendidikan untuk melihat
+            informasi administrasi pendaftaran.
+        </p>
+    </section>
+
+    <section class="administrasi-content">
+
+        <div class="administrasi-tabs">
+            <button class="active" data-jenjang="RA">RA</button>
+            <button data-jenjang="SDIT">SDIT</button>
+            <button data-jenjang="SMP">SMP</button>
+            <button data-jenjang="SMK">SMK</button>
+        </div>
+
+        <div class="administrasi-card">
+
+            <h2 id="judulJenjang">Administrasi RA</h2>
+
+            <div class="administrasi-image">
+
+                <img
+                    id="gambarAdministrasi"
+                    src=""
+                    alt="Informasi administrasi PPDB"
+                    style="display:none;"
+                >
+
+                <div id="pesanKosong">
+                    <span>📄</span>
+                    <h3>Informasi Belum Tersedia</h3>
+                    <p>
+                        Informasi administrasi untuk jenjang ini
+                        belum diunggah oleh pihak yayasan.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>PPDB YAYASAN</p>
+    <small>Portal Penerimaan Peserta Didik Baru</small>
+</footer>
+
+<script src="../js/administrasi.js"></script>
+
+</body>
+</html>

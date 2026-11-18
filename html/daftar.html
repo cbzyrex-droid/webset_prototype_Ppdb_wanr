@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Pendaftaran | PPDB Yayasan</title>
+  <link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/form.css"><link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+<header class="navbar"><a class="logo" href="index.html"><span class="logo-mark">PPDB</span><span><strong>PPDB YAYASAN</strong><small>Formulir Pendaftaran</small></span></a><nav><a href="index.html">Beranda</a><a href="pengumuman.html">Pengumuman</a><a href="kontak.html">Kontak</a></nav></header>
+<main class="form-page">
+  <div class="form-intro"><span class="eyebrow">TAHUN AJARAN 2027/2028</span><h1>Formulir Pendaftaran</h1><p>Isi data dengan benar. Kolom bertanda <b>*</b> wajib diisi.</p></div>
+  <div class="prototype-warning"><strong>Catatan uji coba:</strong> versi ini masih menyimpan data pada browser yang digunakan. Belum mengirim data ke server atau database online.</div>
+  <form id="formPPDB" class="card-form">
+    <section class="form-section"><div class="form-section-heading"><span>01</span><div><h2>Data Calon Siswa</h2><p>Informasi identitas dan jenjang yang dipilih.</p></div></div>
+      <div class="form-grid">
+        <label class="field full">Nama lengkap sesuai dokumen *<input id="nama" name="nama" type="text" autocomplete="name" required></label>
+        <label class="field">Nama panggilan (opsional)<input id="namaPanggilan" name="namaPanggilan" type="text"></label>
+        <label class="field">NIK *<input id="nik" name="nik" type="text" inputmode="numeric" minlength="16" maxlength="16" pattern="[0-9]{16}" title="Masukkan 16 digit NIK" required></label>
+        <label class="field">NISN (jika ada)<input id="nisn" name="nisn" type="text" inputmode="numeric" maxlength="10"></label>
+        <label class="field">Jenis kelamin *<select id="jenisKelamin" name="jenisKelamin" required><option value="">Pilih jenis kelamin</option><option value="Laki-laki">Laki-laki</option><option value="Perempuan">Perempuan</option></select></label>
+        <label class="field">Agama *<select id="agama" name="agama" required><option value="">Pilih agama</option><option>Islam</option><option>Kristen</option><option>Katolik</option><option>Hindu</option><option>Buddha</option><option>Konghucu</option><option>Lainnya</option></select></label>
+        <label class="field">Tempat lahir *<input id="tempatLahir" name="tempatLahir" type="text" required></label>
+        <label class="field">Tanggal lahir *<input id="tanggalLahir" name="tanggalLahir" type="date" required></label>
+        <label class="field">Anak ke- *<input id="anakKe" name="anakKe" type="number" min="1" required></label>
+        <label class="field">Jumlah bersaudara *<input id="jumlahSaudara" name="jumlahSaudara" type="number" min="1" required></label>
+        <label class="field">Jenis pendaftaran *<select id="jenisPendaftaran" name="jenisPendaftaran" required><option value="">Pilih jenis pendaftaran</option><option value="Siswa baru">Siswa baru</option><option value="Pindahan">Pindahan</option></select></label>
+        <label class="field">Jenjang yang dipilih *<select id="jenjang" name="jenjang" required><option value="">Pilih jenjang</option><option value="RA">RA</option><option value="SDIT">SDIT</option><option value="SMP">SMP</option><option value="SMK">SMK</option></select></label>
+        <label class="field hidden-field" id="kelasWrapper">Kelas yang dituju *<select id="kelasTujuan" name="kelasTujuan"><option value="">Pilih kelas</option></select></label>
+        <label class="field full">Alamat lengkap *<textarea id="alamat" name="alamat" rows="3" required></textarea></label>
+        <label class="field full">Asal sekolah (isi jika pindahan atau pernah bersekolah)<input id="asalSekolah" name="asalSekolah" type="text"></label>
+      </div>
+    </section>
+    <section class="form-section"><div class="form-section-heading"><span>02</span><div><h2>Data Orang Tua / Wali</h2><p>Informasi untuk keperluan komunikasi dan administrasi.</p></div></div>
+      <div class="form-grid">
+        <label class="field">Nama ayah/wali *<input id="ayah" name="ayah" type="text" required></label>
+        <label class="field">Pekerjaan ayah/wali<select id="pekerjaanAyah" name="pekerjaanAyah"><option value="">Pilih pekerjaan</option><option>PNS</option><option>Wiraswasta</option><option>Petani</option><option>Buruh</option><option>Karyawan swasta</option><option>Lainnya</option></select></label>
+        <label class="field">Pendidikan terakhir ayah/wali<select id="pendidikanAyah" name="pendidikanAyah"><option value="">Pilih pendidikan</option><option>Tidak sekolah</option><option>SD/MI</option><option>SMP/MTs</option><option>SMA/SMK/MA</option><option>Diploma</option><option>S1</option><option>S2</option><option>S3</option></select></label>
+        <label class="field">Nama ibu/wali *<input id="ibu" name="ibu" type="text" required></label>
+        <label class="field">Pekerjaan ibu/wali<select id="pekerjaanIbu" name="pekerjaanIbu"><option value="">Pilih pekerjaan</option><option>Ibu rumah tangga</option><option>PNS</option><option>Wiraswasta</option><option>Petani</option><option>Buruh</option><option>Karyawan swasta</option><option>Lainnya</option></select></label>
+        <label class="field">Pendidikan terakhir ibu/wali<select id="pendidikanIbu" name="pendidikanIbu"><option value="">Pilih pendidikan</option><option>Tidak sekolah</option><option>SD/MI</option><option>SMP/MTs</option><option>SMA/SMK/MA</option><option>Diploma</option><option>S1</option><option>S2</option><option>S3</option></select></label>
+        <label class="field">Penghasilan orang tua per bulan<select id="penghasilanOrangTua" name="penghasilanOrangTua"><option value="">Pilih rentang penghasilan</option><option>≤ Rp500.000</option><option>Rp500.000–Rp1.000.000</option><option>Rp1.000.000–Rp2.000.000</option><option>Rp2.000.000–Rp3.000.000</option><option>Rp3.000.000–Rp4.000.000</option><option>Di atas Rp4.000.000</option></select></label>
+        <label class="field">Nomor WhatsApp orang tua *<input id="wa" name="wa" type="tel" inputmode="tel" autocomplete="tel" required></label>
+        <label class="field full">Direkomendasikan oleh (opsional)<input id="direkomendasikanOleh" name="direkomendasikanOleh" type="text" placeholder="Nama orang yang merekomendasikan"></label>
+      </div>
+    </section>
+    <section class="form-section confirm-section"><label class="consent"><input type="checkbox" id="setuju" required><span>Saya menyatakan bahwa data yang diisi benar dan bersedia data ini digunakan untuk proses penerimaan peserta didik baru. *</span></label><button type="submit" class="btn-kirim"><span aria-hidden="true">✓</span> Kirim Pendaftaran</button><p class="form-footnote">Pastikan data sudah benar sebelum mengirim formulir.</p></section>
+  </form>
+</main>
+<footer><strong>PPDB YAYASAN</strong><p>Portal Penerimaan Peserta Didik Baru · Tahun Ajaran 2027/2028</p></footer>
+<script src="../js/daftar.js"></script>
+</body></html>

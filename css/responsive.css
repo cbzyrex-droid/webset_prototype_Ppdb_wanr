@@ -1,0 +1,69 @@
+
+/* ===================================
+   RESPONSIVE
+   File : responsive.css
+=================================== */
+
+@media(max-width:768px){
+
+.navbar{
+    flex-direction:column;
+    gap:15px;
+    padding:15px 20px;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+}
+
+.hero-text h1{
+    font-size:34px;
+}
+
+.hero-text p{
+    font-size:18px;
+}
+
+.card-container{
+    grid-template-columns:1fr;
+}
+
+.alur-container{
+    grid-template-columns:1fr;
+}
+
+.dashboard{
+    flex-direction:column;
+}
+
+.sidebar{
+    width:100%;
+}
+
+.content{
+    padding:20px;
+}
+
+.toolbar{
+    flex-direction:column;
+}
+
+.toolbar input,
+.toolbar select,
+.btn-download{
+    width:100%;
+}
+
+table{
+    display:block;
+    overflow-x:auto;
+}
+
+.modal-content{
+    width:95%;
+}
+
+}

@@ -1,0 +1,4 @@
+/* Gaya komponen formulir PPDB */
+@media print { body { background:#fff; } button { display:none!important; } #areaCetak { box-shadow:none; border:none; } }
+.status-box { background:#e8f4ff; border-left:5px solid #1c5e91; padding:15px; border-radius:12px; margin:20px 0; }
+#statusSiswa { font-size:18px; font-weight:bold; color:#b7791f; }

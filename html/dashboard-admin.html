@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Admin PPDB</title>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+<!-- Sidebar -->
+<aside class="sidebar">
+
+<h2>📚 PPDB Admin</h2>
+
+<ul>
+<li>🏠 Dashboard</li>
+<li>👨‍🎓 Data Pendaftar</li>
+<li>📢 Pengumuman</li>
+<li><a href="login-admin.html">🚪 Logout</a></li>
+</ul>
+
+</aside>
+
+<!-- Main -->
+<main class="content">
+
+<h1>Dashboard PPDB</h1>
+
+<div class="statistik">
+
+<div class="box-stat">
+<h3>Total Pendaftar</h3>
+<p id="totalSiswa">0</p>
+</div>
+
+<div class="box-stat">
+<h3>Diterima</h3>
+<p id="diterima">0</p>
+</div>
+
+<div class="box-stat">
+<h3>Menunggu</h3>
+<p id="menunggu">0</p>
+</div>
+
+<div class="box-stat">
+<h3>Ditolak</h3>
+<p id="ditolak">0</p>
+</div>
+
+</div>
+
+<h2>Data Pendaftar</h2>
+
+<!-- SEARCH DAN FILTER -->
+
+<div class="toolbar">
+
+    <input
+        type="text"
+        id="cariSiswa"
+        placeholder="Cari Nama atau NISN..."
+        onkeyup="filterData()">
+
+    <select id="filterJenjang" onchange="filterData()">
+        <option value="">Semua Jenjang</option>
+        <option value="SD">SD</option>
+        <option value="SMP">SMP</option>
+        <option value="SMA">SMA</option>
+    </select>
+
+    <select id="filterStatus" onchange="filterData()">
+        <option value="">Semua Status</option>
+        <option value="Menunggu">Menunggu</option>
+        <option value="Diterima">Diterima</option>
+        <option value="Ditolak">Ditolak</option>
+    </select>
+
+    <button class="btn-download" onclick="downloadExcel()">
+        Download Excel
+    </button>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+<th>No</th>
+<th>Nama</th>
+<th>NISN</th>
+<th>Jenjang</th>
+<th>Status</th>
+<th>Aksi</th>
+</tr>
+
+</thead>
+
+<tbody id="tabelPendaftar"></tbody>
+
+</table>
+
+</main>
+
+</div>
+
+<script src="../js/admin.js"></script>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/dashboard.css">
+<link rel="stylesheet" href="../css/modal.css">
+<link rel="stylesheet" href="../css/responsive.css">
+</body>
+</html>

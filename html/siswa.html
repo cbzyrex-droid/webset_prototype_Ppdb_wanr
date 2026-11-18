@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Siswa PPDB</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/form.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+<div class="card-form">
+
+    <h2>🎓 Dashboard Siswa PPDB</h2>
+    <p>Selamat datang, berikut data pendaftaran kamu.</p>
+
+    <!-- Biodata siswa otomatis muncul -->
+    <div id="profilSiswa"></div>
+
+    <hr>
+
+    <!-- Status PPDB -->
+    <div class="status-box">
+        <h3>Status PPDB</h3>
+        <p id="statusSiswa">Menunggu Verifikasi</p>
+    </div>
+
+    <hr>
+
+    <!-- Tombol -->
+    <button class="btn-daftar" onclick="window.location.href='bukti.html'">
+        🧾 Cetak Bukti Pendaftaran
+    </button>
+
+    <button class="btn-daftar" onclick="window.location.href='pengumuman.html'">
+        📢 Lihat Pengumuman
+    </button>
+
+    <button class="btn-daftar" onclick="logoutSiswa()">
+        🚪 Logout
+    </button>
+
+</div>
+
+<script src="../js/script.js"></script>
+
+</body>
+</html>

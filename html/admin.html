@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin PPDB</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="admin-profile">
+            <img src="../img/logo-sekolah.png" alt="Logo Sekolah">
+
+            <h3>Admin PPDB</h3>
+
+            <p>Tahun Ajaran 2027/2028</p>
+        </div>
+
+        <ul>
+            <li>📊 Dashboard</li>
+            <li>👨‍🎓 Data Pendaftar</li>
+            <li>📢 Pengumuman</li>
+
+            <li>
+                <a href="index.html">🚪 Keluar</a>
+            </li>
+        </ul>
+
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+        <h1>Dashboard Admin PPDB</h1>
+
+        <p>Kelola seluruh data pendaftar PPDB.</p>
+
+        <!-- CARD STATISTIK -->
+
+        <div class="statistik">
+
+            <div class="box-stat">
+                <h3>Total Pendaftar</h3>
+                <p id="totalSiswa">0</p>
+            </div>
+
+            <div class="box-stat">
+                <h3>Diterima</h3>
+                <p id="diterima">0</p>
+            </div>
+
+            <div class="box-stat">
+                <h3>Menunggu</h3>
+                <p id="menunggu">0</p>
+            </div>
+
+            <div class="box-stat">
+                <h3>Ditolak</h3>
+                <p id="ditolak">0</p>
+            </div>
+
+        </div>
+
+        <!-- TOOLBAR -->
+
+        <div class="toolbar">
+
+            <input
+                type="text"
+                id="cariSiswa"
+                placeholder="🔍 Cari nomor, nama, atau NISN..."
+                onkeyup="filterData()">
+
+            <select id="filterJenjang" onchange="filterData()">
+                <option value="">Semua Jenjang</option>
+                <option value="RA">RA</option>
+                <option value="SDIT">SDIT</option>
+                <option value="SMP">SMP</option>
+                <option value="SMK">SMK</option>
+            </select>
+
+            <select id="filterStatus" onchange="filterData()">
+                <option value="">Semua Status</option>
+                <option value="Menunggu">Menunggu</option>
+                <option value="Diterima">Diterima</option>
+                <option value="Ditolak">Ditolak</option>
+            </select>
+
+            <button class="btn-download" onclick="downloadExcel()">
+                📥 Download Excel
+            </button>
+
+        </div>
+
+        <!-- TABEL PENDAFTAR -->
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>No</th>
+                    <th>Nomor Pendaftaran</th>
+                    <th>Nama</th>
+                    <th>NISN</th>
+                    <th>Jenjang</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="tabelPendaftar"></tbody>
+
+        </table>
+
+    </main>
+
+</div>
+
+<!-- MODAL DETAIL SISWA -->
+
+<div id="modalDetail" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="tutupModal()">&times;</span>
+
+        <h2>Detail Pendaftar</h2>
+
+        <div id="isiDetail"></div>
+
+    </div>
+
+</div>
+
+<script src="../js/admin.js"></script>
+
+</body>
+</html>
